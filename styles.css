@@ -1,0 +1,52 @@
+/* Apply gradient background using pink and sea blue */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff69b4, #20b2aa); /* pink and sea blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+/* Centered container */
+.container {
+  text-align: center;
+  animation: fadeIn 2s ease-out, float 3s ease-in-out infinite;
+}
+
+/* Main text style */
+h1 {
+  font-size: 2.5rem;
+  color: white;
+  max-width: 90%;
+}
+
+/* Highlighted part */
+h1 span {
+  color: #fffacd; /* soft contrast yellow */
+}
+
+/* Fade-in on load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gentle floating effect */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
